@@ -1,0 +1,7 @@
+size,num_layers,context_length,global_batch,world_size,bf16,mode,status,step_ms,step_std_ms,blocked_on_comm_ms,comm_fraction,peak_gib
+medium,24,512,4,2,0,naive,ok,3217.1,49.5,2351.8,0.731,9.24
+medium,24,512,4,2,0,flat,ok,3029.2,42.1,2157.4,0.7122,9.24
+medium,24,512,4,2,0,overlap,ok,2816.2,58.4,16.2,0.0058,9.24
+large,36,512,4,2,0,naive,ok,3975.9,13.9,2820.1,0.7093,19.4
+large,36,512,4,2,0,flat,ok,3844.1,23.8,2693.8,0.7008,19.27
+large,36,512,4,2,0,overlap,ok,3290.1,259.4,20.9,0.0064,19.4

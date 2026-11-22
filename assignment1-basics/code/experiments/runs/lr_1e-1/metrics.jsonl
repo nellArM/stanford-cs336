@@ -1,0 +1,2 @@
+{"step": 20, "tokens": 655360, "train_seconds": 13.72, "train_loss": NaN, "grad_norm": NaN, "lr": 0.052777777777777785, "status": "diverged"}
+{"status": "diverged", "final_step": 20, "train_seconds": 13.72}

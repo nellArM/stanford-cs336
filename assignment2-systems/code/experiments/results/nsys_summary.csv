@@ -1,0 +1,66 @@
+label,stage,wall_ms,gpu_kernel_ms,matmul_share,top_kernel,top_kernel_ms,top_kernel_calls_per_step
+small_ctx256_forward,forward,19.618,64.225,0.7059,ampere_sgemm_128x64_tn,35.753,85.0
+small_ctx256_forward,scaled dot product attention,4.088,14.161,0.6767,ampere_sgemm_128x128_tn,5.129,12.0
+small_ctx256_forward,computing attention scores,1.686,6.889,0.7445,ampere_sgemm_128x128_tn,5.129,12.0
+small_ctx256_forward,computing softmax,1.067,2.68,0.0,elementwise_kernel,1.645,24.0
+small_ctx256_forward,final matmul,1.107,4.592,0.9699,ampere_sgemm_128x128_nn,4.454,12.0
+small_ctx256_train,forward,22.843,60.859,0.6541,ampere_sgemm_128x64_tn,29.291,85.0
+small_ctx256_train,backward,52.505,136.994,0.4593,ampere_sgemm_128x64_nn,40.949,84.0
+small_ctx256_train,optimizer,39.652,81.017,0.0,vectorized_elementwise_kernel,81.017,1776.0
+small_ctx256_train,scaled dot product attention,4.715,16.22,0.6485,ampere_sgemm_128x128_tn,7.04,12.0
+small_ctx256_train,computing attention scores,1.917,10.751,0.6548,ampere_sgemm_128x128_tn,7.04,12.0
+small_ctx256_train,computing softmax,1.288,1.851,0.0,elementwise_kernel,0.817,24.0
+small_ctx256_train,final matmul,1.284,3.618,0.9616,ampere_sgemm_128x128_nn,3.479,12.0
+small_ctx512_forward,forward,19.536,147.703,0.5923,ampere_sgemm_128x64_tn,78.66,85.0
+small_ctx512_forward,scaled dot product attention,4.087,41.343,0.2134,elementwise_kernel,18.45,48.0
+small_ctx512_forward,computing attention scores,1.644,15.024,0.2869,elementwise_kernel,7.091,12.0
+small_ctx512_forward,computing softmax,1.087,21.557,0.0,elementwise_kernel,11.109,24.0
+small_ctx512_forward,final matmul,1.125,4.762,0.9475,ampere_sgemm_128x128_nn,4.512,12.0
+small_ctx512_train,forward,23.519,152.42,0.6243,ampere_sgemm_128x64_tn,84.046,85.0
+small_ctx512_train,backward,106.3,313.633,0.1799,Kernel2,110.642,110.0
+small_ctx512_train,optimizer,40.12,80.538,0.0,vectorized_elementwise_kernel,80.538,1776.0
+small_ctx512_train,scaled dot product attention,4.793,44.453,0.25,elementwise_kernel,18.474,48.0
+small_ctx512_train,computing attention scores,1.95,16.975,0.2538,elementwise_kernel,8.102,12.0
+small_ctx512_train,computing softmax,1.264,20.422,0.0,elementwise_kernel,10.122,24.0
+small_ctx512_train,final matmul,1.345,7.055,0.9647,ampere_sgemm_128x128_nn,6.806,12.0
+small_ctx1024_forward,forward,19.396,374.958,0.5005,ampere_sgemm_128x64_tn,119.118,73.0
+small_ctx1024_forward,scaled dot product attention,4.102,170.726,0.1985,elementwise_kernel,68.886,48.0
+small_ctx1024_forward,computing attention scores,1.677,56.215,0.2484,vectorized_elementwise_kernel,22.793,24.0
+small_ctx1024_forward,computing softmax,1.052,93.15,0.0,elementwise_kernel,47.995,24.0
+small_ctx1024_forward,final matmul,1.141,21.361,0.9331,ampere_sgemm_128x128_nn,19.932,12.0
+small_ctx1024_train,forward,23.05,382.946,0.4982,ampere_sgemm_128x64_tn,114.714,73.0
+small_ctx1024_train,backward,254.932,802.312,0.2778,vectorized_elementwise_kernel,262.728,489.0
+small_ctx1024_train,optimizer,39.927,77.558,0.0,vectorized_elementwise_kernel,77.558,1776.0
+small_ctx1024_train,scaled dot product attention,4.813,171.614,0.2091,elementwise_kernel,65.821,48.0
+small_ctx1024_train,computing attention scores,1.947,53.144,0.2655,vectorized_elementwise_kernel,20.79,24.0
+small_ctx1024_train,computing softmax,1.318,96.238,0.0,elementwise_kernel,47.121,24.0
+small_ctx1024_train,final matmul,1.312,22.232,0.9795,ampere_sgemm_128x128_nn,21.776,12.0
+large_ctx256_forward,forward,205.31,409.218,0.7569,ampere_sgemm_128x64_tn,294.946,253.0
+large_ctx256_forward,scaled dot product attention,30.081,61.744,0.2393,elementwise_kernel,21.778,144.0
+large_ctx256_forward,computing attention scores,8.667,25.861,0.3301,vectorized_elementwise_kernel,11.763,72.0
+large_ctx256_forward,computing softmax,17.358,28.083,0.0,elementwise_kernel,14.654,72.0
+large_ctx256_forward,final matmul,3.365,7.8,0.7997,ampere_sgemm_128x128_nn,6.238,36.0
+large_ctx256_train,forward,204.777,417.007,0.7499,ampere_sgemm_128x64_tn,298.862,253.0
+large_ctx256_train,backward,667.04,832.485,0.212,Kernel2,374.432,217.0
+large_ctx256_train,optimizer,532.716,615.353,0.0,vectorized_elementwise_kernel,615.353,5232.0
+large_ctx256_train,scaled dot product attention,30.869,60.772,0.2276,elementwise_kernel,21.041,144.0
+large_ctx256_train,computing attention scores,14.333,25.898,0.2949,vectorized_elementwise_kernel,11.73,72.0
+large_ctx256_train,computing softmax,10.885,27.056,0.0,elementwise_kernel,12.887,72.0
+large_ctx256_train,final matmul,4.895,7.818,0.7924,ampere_sgemm_128x128_nn,6.195,36.0
+large_ctx512_forward,forward,447.056,920.446,0.6714,ampere_sgemm_128x64_tn,303.147,73.0
+large_ctx512_forward,scaled dot product attention,94.573,216.219,0.2012,elementwise_kernel,93.192,144.0
+large_ctx512_forward,computing attention scores,44.139,63.773,0.2552,vectorized_elementwise_kernel,25.62,72.0
+large_ctx512_forward,computing softmax,45.266,121.182,0.0,elementwise_kernel,67.269,72.0
+large_ctx512_forward,final matmul,4.424,31.264,0.8706,ampere_sgemm_128x128_nn,27.22,36.0
+large_ctx512_train,forward,450.303,927.634,0.6697,ampere_sgemm_128x64_tn,305.301,73.0
+large_ctx512_train,backward,1427.143,1855.418,0.0533,Kernel2,1007.856,506.0
+large_ctx512_train,optimizer,532.254,617.298,0.0,vectorized_elementwise_kernel,617.298,5232.0
+large_ctx512_train,scaled dot product attention,95.423,216.551,0.2234,elementwise_kernel,83.385,144.0
+large_ctx512_train,computing attention scores,43.475,62.949,0.3041,vectorized_elementwise_kernel,23.851,72.0
+large_ctx512_train,computing softmax,42.297,120.335,0.0,elementwise_kernel,59.398,72.0
+large_ctx512_train,final matmul,8.878,33.266,0.8788,ampere_sgemm_128x128_nn,29.236,36.0
+large_ctx1024_forward,forward,1127.655,2301.817,0.5019,ampere_sgemm_128x64_tn,942.229,217.0
+large_ctx1024_forward,scaled dot product attention,25.113,855.815,0.249,elementwise_kernel,346.267,144.0
+large_ctx1024_forward,computing attention scores,10.261,321.507,0.3134,vectorized_elementwise_kernel,119.491,72.0
+large_ctx1024_forward,computing softmax,7.829,417.798,0.0,elementwise_kernel,240.873,72.0
+large_ctx1024_forward,final matmul,6.21,116.51,0.9644,ampere_sgemm_128x128_nn,112.36,36.0

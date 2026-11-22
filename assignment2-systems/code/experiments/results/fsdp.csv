@@ -1,0 +1,6 @@
+size,num_layers,context_length,global_batch,bf16,prefetch,status,full_params_gib,local_params_gib,step_ms,step_std_ms,blocked_on_gather_ms,instrumented_step_ms,gather_hits,gather_misses,gather_ready,call_sites,peak_gib,init_peak_gib
+xl,16,512,4,1,1,ok,6.44,3.22,4817.9,17.3,5.4,5178.5,1362,0,0,114,14.9,6.55
+xl,16,512,4,1,0,ok,6.44,3.22,4680.2,488.9,3223.3,5577.9,0,1362,0,114,14.86,6.55
+xl,16,512,4,0,1,ok,6.44,3.22,9325.8,34.6,5.2,9873.1,1362,0,0,114,19.62,6.55
+xl,32,512,4,1,1,ok,12.69,6.35,7030.1,2304.7,11.3,12841.0,2706,0,0,226,29.02,12.86
+xl,32,512,4,1,0,ok,12.69,6.35,12184.8,14.4,7755.9,13592.2,0,2706,0,226,28.98,12.86

@@ -1,0 +1,12 @@
+tag,size,num_layers,context_length,batch_size,mode,warmup,steps,bf16,compile,status,params_m,forward_ms,forward_std_ms,backward_ms,backward_std_ms,optimizer_ms,optimizer_std_ms,total_ms,total_std_ms,peak_gib,baseline_gib
+small_ctx256_forward,small,12,256,4,forward,3,5,0,0,ok,128.6,72.109,0.521,0.0,0.0,0.0,0.0,72.109,0.521,0.553,0.489
+small_ctx256_train,small,12,256,4,train,3,5,0,0,ok,128.6,71.151,0.497,152.236,1.12,92.24,0.468,315.627,0.559,3.024,2.021
+small_ctx512_forward,small,12,512,4,forward,3,5,0,0,ok,128.6,158.877,0.883,0.0,0.0,0.0,0.0,158.877,0.883,0.712,0.489
+small_ctx512_train,small,12,512,4,train,3,5,0,0,ok,128.6,158.657,0.465,327.333,0.494,92.487,0.85,578.476,0.992,5.03,1.956
+small_ctx1024_forward,small,12,1024,4,forward,3,5,0,0,ok,128.6,382.735,0.29,0.0,0.0,0.0,0.0,382.735,0.29,1.31,0.489
+small_ctx1024_train,small,12,1024,4,train,3,5,0,0,ok,128.6,388.508,1.009,823.785,2.862,92.249,0.538,1304.542,3.646,10.854,1.962
+large_ctx256_forward,large,36,256,4,forward,3,5,0,0,ok,969.4,428.956,1.051,0.0,0.0,0.0,0.0,428.956,1.051,3.832,3.725
+large_ctx256_train,large,36,256,4,train,3,5,0,0,ok,969.4,433.702,1.548,884.701,1.095,666.158,1.502,1984.562,1.729,18.081,14.865
+large_ctx512_forward,large,36,512,4,forward,3,5,0,0,ok,969.4,944.083,3.87,0.0,0.0,0.0,0.0,944.083,3.87,4.096,3.725
+large_ctx512_train,large,36,512,4,train,3,5,0,0,ok,969.4,949.264,2.219,1887.987,2.381,666.551,0.668,3503.802,3.646,27.488,14.567
+large_ctx1024_forward,large,36,1024,4,forward,3,5,0,0,ok,969.4,2323.453,1.173,0.0,0.0,0.0,0.0,2323.453,1.173,5.094,3.725

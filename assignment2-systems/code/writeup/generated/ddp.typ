@@ -1,0 +1,12 @@
+#table(columns: 7, align: (left, left, left, right, right, right, right), stroke: none, inset: (x: 5pt, y: 3pt),
+  table.hline(),
+  table.header([*model*], [*precision*], [*gradient sync*], [*time per step (ms)*], [*blocked on communication (ms)*], [*share of step*], [*peak / GPU (GiB)*]),
+  table.hline(stroke: 0.5pt),
+  [medium], [fp32], [naive], [3,217 ± 49.5], [2,352], [73.1%], [9.24],
+  [medium], [fp32], [flat], [3,029 ± 42.1], [2,157], [71.2%], [9.24],
+  [medium], [fp32], [overlap], [2,816 ± 58.4], [16.2], [0.6%], [9.24],
+  [large], [fp32], [naive], [3,976 ± 13.9], [2,820], [70.9%], [19.4],
+  [large], [fp32], [flat], [3,844 ± 23.8], [2,694], [70.1%], [19.3],
+  [large], [fp32], [overlap], [3,290 ± 259], [20.9], [0.6%], [19.4],
+  table.hline(),
+)

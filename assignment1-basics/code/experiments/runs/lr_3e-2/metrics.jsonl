@@ -1,0 +1,4 @@
+{"step": 20, "tokens": 655360, "train_seconds": 13.75, "train_loss": 6.441088676452637, "grad_norm": 3.52169132232666, "lr": 0.01583333333333333}
+{"step": 40, "tokens": 1310720, "train_seconds": 21.31, "train_loss": 8.137828826904297, "grad_norm": 31131896381440.0, "lr": 0.029999548537766794}
+{"step": 60, "tokens": 1966080, "train_seconds": 28.78, "train_loss": NaN, "grad_norm": NaN, "lr": 0.029973472147876472, "status": "diverged"}
+{"status": "diverged", "final_step": 60, "train_seconds": 28.78}

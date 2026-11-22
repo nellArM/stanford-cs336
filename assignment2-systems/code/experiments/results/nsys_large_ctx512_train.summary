@@ -1,0 +1,34 @@
+=== large_ctx512_train: 5 measured steps ===
+[forward] python wall (range) 450.30 ms/step, GPU kernel time 927.63 ms/step, matmul share 67.0%
+     32.9%    305.301 ms  x   73.0/step  ampere_sgemm_128x64_tn
+     30.9%    286.681 ms  x  216.0/step  ampere_sgemm_128x128_tn
+     14.6%    135.555 ms  x  654.0/step  vectorized_elementwise_kernel
+     12.7%    117.895 ms  x  652.0/step  elementwise_kernel
+      4.5%     41.527 ms  x  148.0/step  reduce_kernel
+      3.2%     29.236 ms  x   36.0/step  ampere_sgemm_128x128_nn
+[backward] python wall (range) 1427.14 ms/step, GPU kernel time 1855.42 ms/step, matmul share 5.3%
+     54.3%   1007.856 ms  x  506.0/step  Kernel2
+     23.5%    436.760 ms  x 1425.0/step  vectorized_elementwise_kernel
+     14.2%    263.196 ms  x 1230.0/step  elementwise_kernel
+      3.0%     56.477 ms  x   72.0/step  ampere_sgemm_128x128_nt
+      2.0%     36.286 ms  x  220.0/step  reduce_kernel
+      1.4%     25.260 ms  x   36.0/step  ampere_sgemm_128x128_nn
+[optimizer] python wall (range) 532.25 ms/step, GPU kernel time 617.30 ms/step, matmul share 0.0%
+    100.0%    617.298 ms  x 5232.0/step  vectorized_elementwise_kernel
+[scaled dot product attention] python wall (range) 95.42 ms/step, GPU kernel time 216.55 ms/step, matmul share 22.3%
+     38.5%     83.385 ms  x  144.0/step  elementwise_kernel
+     22.0%     47.553 ms  x  108.0/step  vectorized_elementwise_kernel
+     17.2%     37.235 ms  x   72.0/step  reduce_kernel
+     13.5%     29.236 ms  x   36.0/step  ampere_sgemm_128x128_nn
+      8.8%     19.142 ms  x   36.0/step  ampere_sgemm_128x128_tn
+[computing attention scores] python wall (range) 43.47 ms/step, GPU kernel time 62.95 ms/step, matmul share 30.4%
+     37.9%     23.851 ms  x   72.0/step  vectorized_elementwise_kernel
+     31.7%     19.956 ms  x   36.0/step  elementwise_kernel
+     30.4%     19.142 ms  x   36.0/step  ampere_sgemm_128x128_tn
+[computing softmax] python wall (range) 42.30 ms/step, GPU kernel time 120.34 ms/step, matmul share 0.0%
+     49.4%     59.398 ms  x   72.0/step  elementwise_kernel
+     30.9%     37.235 ms  x   72.0/step  reduce_kernel
+     19.7%     23.702 ms  x   36.0/step  vectorized_elementwise_kernel
+[final matmul] python wall (range) 8.88 ms/step, GPU kernel time 33.27 ms/step, matmul share 87.9%
+     87.9%     29.236 ms  x   36.0/step  ampere_sgemm_128x128_nn
+     12.1%      4.030 ms  x   36.0/step  elementwise_kernel

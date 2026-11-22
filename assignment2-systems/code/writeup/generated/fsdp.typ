@@ -1,0 +1,11 @@
+#table(columns: 10, align: (left, right, left, left, right, right, right, right, right, right), stroke: none, inset: (x: 5pt, y: 3pt),
+  table.hline(),
+  table.header([*model*], [*layers*], [*compute dtype*], [*prefetch*], [*full params (GiB)*], [*per-rank params (GiB)*], [*step (ms)*], [*blocked on all-gather (ms/step)*], [*gathers already complete when needed*], [*peak / GPU (GiB)*]),
+  table.hline(stroke: 0.5pt),
+  [xl], [16], [bf16], [yes], [6.44], [3.22], [4,818 ± 17.3], [5.40], [0 / 1362], [14.9],
+  [xl], [16], [bf16], [no], [6.44], [3.22], [4,680 ± 489], [3,223], [0 / 1362], [14.9],
+  [xl], [16], [fp32], [yes], [6.44], [3.22], [9,326 ± 34.6], [5.20], [0 / 1362], [19.6],
+  [xl], [32], [bf16], [yes], [12.7], [6.35], [7,030 ± 2,305], [11.3], [0 / 2706], [29.0],
+  [xl], [32], [bf16], [no], [12.7], [6.35], [12,185 ± 14.4], [7,756], [0 / 2706], [29.0],
+  table.hline(),
+)

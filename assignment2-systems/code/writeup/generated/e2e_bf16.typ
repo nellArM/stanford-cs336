@@ -1,0 +1,11 @@
+#table(columns: 7, align: (left, right, right, right, right, right, right), stroke: none, inset: (x: 5pt, y: 3pt),
+  table.hline(),
+  table.header([*size*], [*params (M)*], [*forward only (ms)*], [*forward (ms)*], [*backward (ms)*], [*optimizer (ms)*], [*peak (GiB)*]),
+  table.hline(stroke: 0.5pt),
+  [small], [129], [58.7 ± 1.41], [91.3 ± 1.11], [188 ± 0.93], [87.6 ± 1.97], [4.17],
+  [medium], [423], [235 ± 0.90], [243 ± 0.81], [505 ± 2.46], [279 ± 3.33], [11.5],
+  [large], [969], [449 ± 1.90], [452 ± 3.51], [984 ± 1.51], [658 ± 0.91], [23.9],
+  [xl], [3,407], [916 ± 2.39], [OOM], [OOM], [OOM], [OOM],
+  [10B], [--], [OOM], [OOM], [OOM], [OOM], [OOM],
+  table.hline(),
+)

@@ -1,0 +1,1 @@
+2258 ms of NCCL kernel time in a 2815 ms step

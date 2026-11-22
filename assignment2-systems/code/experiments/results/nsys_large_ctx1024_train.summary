@@ -1,0 +1,1 @@
+nsys: large_ctx1024_train does not fit on a 48 GB card (out of memory twice with 46 GiB free)

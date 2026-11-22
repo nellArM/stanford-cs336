@@ -1,0 +1,10 @@
+#table(columns: 5, align: (right, left, left, right, right), stroke: none, inset: (x: 5pt, y: 3pt),
+  table.hline(),
+  table.header([*context*], [*precision*], [*measured train-step peak (GiB)*], [*GiB per layer*], [*extrapolated to 32 layers (GiB)*]),
+  table.hline(stroke: 0.5pt),
+  [128], [fp32], [L=2: 4.40, L=4: 7.54, L=8: 13.80], [1.57], [51.4],
+  [128], [bf16], [L=2: 4.40, L=4: 7.54, L=8: 13.80], [1.57], [51.4],
+  [2,048], [fp32], [L=1: 14.73, L=2: 22.26, L=3: 29.79], [7.53], [248],
+  [2,048], [bf16], [L=1: 14.69, L=2: 20.52, L=3: 26.34], [5.83], [195],
+  table.hline(),
+)

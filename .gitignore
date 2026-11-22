@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Secrets / env
+.env
+
+# ML artifacts
+wandb/
+*.pt
+*.ckpt
+*.safetensors
+checkpoints/
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,12 @@
+#table(columns: 5, align: (left, left, right, right, right), stroke: none, inset: (x: 5pt, y: 3pt),
+  table.hline(),
+  table.header([*configuration*], [*variant*], [*training step (ms)*], [*peak (GiB)*], [*loss at step 1*]),
+  table.hline(stroke: 0.5pt),
+  [ctx 4096, 8 layers], [baseline], [1,191], [37.6], [11.938],
+  [ctx 4096, 8 layers], [flash], [620], [25.6], [11.938],
+  [ctx 4096, 8 layers], [flash+ce], [608], [12.9], [11.938],
+  [ctx 4096, 8 layers], [flash+ce+adamw], [560], [12.9], [11.938],
+  [ctx 16384, 12 layers], [baseline], [OOM], [--], [--],
+  [ctx 16384, 12 layers], [flash+ce+adamw], [3,227], [33.6], [11.938],
+  table.hline(),
+)
